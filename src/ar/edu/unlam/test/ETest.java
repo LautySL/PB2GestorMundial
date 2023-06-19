@@ -157,9 +157,9 @@ public class ETest {
 		
 		torneo.registrarResultado(1234, 0, 2);
 		
-		torneo.finalizarFaseDeGrupos();
+		torneo.ordenarGrupos();
 		
-		assertEquals(torneo.getEquipos().get(0), Qatar);
+		assertEquals(torneo.getEquipos().get(0), Ecuador);
 		
 	}
 	

@@ -64,10 +64,13 @@ public class Torneo {
 		 return seRegistroElPartido;
 	}
 	
-	public void finalizarFaseDeGrupos() {
-		this.fase = Fase.ELIMINATORIAS;
+	public void ordenarGrupos() {
 		Collections.sort(this.equipos);
-		
+	}
+	
+	public void finalizarFaseDeGrupos() {
+		this.fase = Fase.ELIMINATORIAS;	
+		ordenarGrupos();
 		List <Integer> indices = new ArrayList<>(Arrays.asList(0,1,4,5,8,9,12,13,16,17,20,21,24,25,28,29));
 
 		for (Integer indice : indices) {
